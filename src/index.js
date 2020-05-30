@@ -5,6 +5,9 @@ import './styles.css';
 
 //HTML内のidが'root'のところにキャンバスを挿入
 ReactDOM.render(<div id='app'>
+  <div id='parameter-container'>
+    parameter表示用
+  </div>
   <div id='canvas'/>
 </div>, document.getElementById('root'));
 

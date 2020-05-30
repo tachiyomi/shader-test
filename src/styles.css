@@ -18,6 +18,15 @@ body {
   height: 100%;
 }
 
+#parameter-container{
+  position: fixed;
+  padding: 0px 8px;
+  top: 5px;
+  left: 5px;
+  background-image: linear-gradient(135deg, #65799b 0%, #5e2563 100%);
+  color: #f0f0f0;
+}
+
 #canvas {
   position: fixed;
   top: 0;

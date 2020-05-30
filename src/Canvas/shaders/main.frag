@@ -13,12 +13,15 @@ void main() {
 
   float lightness = 0.0;
   //ランバートシェーダー用（拡散照明モデル）
+  /*
   lightness = max(0.0, dot(-vNormal, LightDirection) * 0.5);
   float offset = 0.5;
   lightness = clamp(lightness + offset, 0.0, 1.0);
+  */
 
   //フォンシェーダー用（鏡面反射モデル）
   //反射光のベクトルを正規化したもの
+  /*
   vec3 ReflectLightDirection = normalize(
       LightDirection + 2.0 * vNormal * max(0.0, dot(-vNormal, LightDirection)));
   //カメラから面へのベクトルを正規化したもの
@@ -26,12 +29,16 @@ void main() {
 
   float spec = max(0.0, dot(-ViewDirection, ReflectLightDirection));
   lightness = clamp(lightness + pow(spec, 20.0), 0.0, 1.0);
+  */
 
   //トゥーンシェーダー用
+  /*
   float n = 8.0;
   lightness = floor(lightness * n) / n;
 
   vec3 monochrome = vec3(lightness);
   vec3 color = materialColor * lightColor * vec3(lightness);
-  gl_FragColor = vec4(color, 1.0);
+  */
+
+  gl_FragColor = vec4(vec3(0.0), 1.0);
 }
